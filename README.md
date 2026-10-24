@@ -20,3 +20,7 @@ You can run this implementation on [adam-zielonka.github.io/game-of-life](https:
 6. Dead cells with 3 neighbors become live.
 
 
+
+## Development
+
+See [DEVELOPMENT.md](DEVELOPMENT.md) for the current runtime, builds and checks.
