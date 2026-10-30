@@ -5,6 +5,7 @@ Use Node.js 24.22+ (24–26) and pnpm 12. The repository pins the verified packa
 ```sh
 pnpm install --frozen-lockfile
 pnpm dev
+pnpm test
 pnpm build
 pnpm audit --audit-level=high
 ```

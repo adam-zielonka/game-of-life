@@ -2,6 +2,7 @@
   "name": "game-of-life",
   "scripts": {
     "dev": "vite",
+    "test": "node --test tests/*.test.mjs",
     "build": "vite build --base=./ --sourcemap",
     "preview": "vite preview"
   },

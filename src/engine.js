@@ -2,7 +2,8 @@ import Colors from './colors.js'
 import Settings from './settings.js'
 
 const ctx = document.getElementById('canvas').getContext('2d')
-let lastBoard, colorLife, colorDead = null
+const { alive: colorLife, dead: colorDead } = Colors
+let lastBoard = null
 let size = Settings.size
 
 function renderCell(i, j, life) {
@@ -19,7 +20,8 @@ function render(board) {
 function restart() {
   lastBoard = null
   size = Settings.size
-  ;[colorLife, colorDead] = Colors.random()
+  document.documentElement.style.setProperty('--cell-alive', colorLife)
+  document.documentElement.style.setProperty('--cell-dead', colorDead)
 
   ctx.canvas.width = window.innerWidth
   ctx.canvas.height = window.innerHeight

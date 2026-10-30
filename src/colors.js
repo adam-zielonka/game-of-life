@@ -1,18 +1,6 @@
-import Random from './random.js'
-
-const COLORS_PAIRS = [
-  ['green', 'yellow'],
-  ['red', 'pink'],
-  ['blue', 'turquoise'],
-  ['orange', 'purple'],
-]
-
-function random() {
-  const [color1, color2] = COLORS_PAIRS[Random.int(COLORS_PAIRS.length)]
-
-  return Random.bool() ? [color1, color2] : [color2, color1]
-}
-
-export default {
-  random,
-}
+// Keep the meaning of light and dark cells stable, including after a restart.
+// The canvas and the visible legend both use this palette.
+export default Object.freeze({
+  alive: '#111827',
+  dead: '#f8fafc',
+})

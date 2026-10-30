@@ -37,6 +37,28 @@
       place-items: center;
     }
 
+    #cell-legend {
+      margin-top: 8px;
+      padding: 8px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #111827;
+      background: #fff;
+      border: 1px solid #111827;
+    }
+
+    .cell-swatch {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 6px;
+      vertical-align: middle;
+      border: 1px solid #111827;
+    }
+
+    .cell-alive { background: var(--cell-alive); }
+    .cell-dead { background: var(--cell-dead); }
+
     h1 {
       font-size: 40pt;
     }
@@ -81,6 +103,10 @@
     <p>Time:&nbsp; <input id='time' /></p>
     <p>Size:&nbsp; <input id='size' /></p>
     <p><button id='reset'>↺</button></p>
+    <div id="cell-legend" aria-label="Cell states">
+      <p><span class="cell-swatch cell-alive" aria-hidden="true"></span>Alive — dark</p>
+      <p><span class="cell-swatch cell-dead" aria-hidden="true"></span>Dead — light</p>
+    </div>
   </div>
   <div id="warning">
     <div>
